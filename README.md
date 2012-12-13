@@ -10,4 +10,4 @@ http://www.yellosoft.us/ipmenulet
 
 # SCREENSHOT
 
-[menubar screenshot](http://www.yellosoft.us/public/images/screens/ipmenulet.png)
+![menubar screenshot](http://www.yellosoft.us/public/images/screens/ipmenulet.png)

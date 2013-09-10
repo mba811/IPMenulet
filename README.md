@@ -8,6 +8,10 @@ http://www.yellosoft.us/ipmenulet
 
 1.1
 
+# LICENSE
+
+FreeBSD
+
 # SCREENSHOT
 
 ![menubar screenshot](http://www.yellosoft.us/public/images/screens/ipmenulet.png)

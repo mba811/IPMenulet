@@ -8,23 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IPaddress : NSObject {
-    
-    NSString *address;
-    
-//    NSString _region;
-//    NSString _region_code;
+@interface IPaddress : NSObject {}
 
-//    NSString _country;
-    NSString *country_code;
-    
-//    NSString _latitude;
-//    NSString _longitude;
-    
-}
+@property (copy) NSString *ip;
+@property (copy) NSString *city;
+@property (copy) NSString *regionCode;
+@property (copy) NSString *postalCode;
+@property (copy) NSString *countryCode;
 
--(id) initWithAddress:(NSString *)address;
+@property double latitude;
+@property double longitude;
 
-+(NSString *) geocode;
+-(id) initWithData: (NSString*) anIP :(NSString*) aCountryCode :(double) aLatitude :(double) aLongitude;
 
 @end

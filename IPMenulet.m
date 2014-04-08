@@ -8,6 +8,7 @@
 
 #import "IPMenulet.h"
 #import "GetIP.h"
+#import "AddressService.h"
 
 @implementation IPMenulet
 
@@ -23,19 +24,25 @@
 }
 
 -(void) awakeFromNib {
+    
 	statusItem=[[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
 	[statusItem setMenu:menu];
-
 	[statusItem setHighlightMode:YES];
 	[statusItem setTitle:@"?.?.?.?"];
 	[statusItem setEnabled:YES];
 
 	timer=[NSTimer scheduledTimerWithTimeInterval:300 target:self selector:@selector(update) userInfo:nil repeats:YES];
 	[timer fire];
+
 }
 
 -(void) update {
-	[statusItem setTitle:[GetIP getIP]];
+    
+    IPaddress *ip = [AddressService getIPaddress];
+    [statusItem setTitle: [NSString stringWithFormat:@"%@ (%@)", [ip ip], [ip countryCode]]];
+    
+//    [statusItem setTitle: [GetIP getIP]];
+    
 }
 
 -(IBAction) refresh: (id) sender {

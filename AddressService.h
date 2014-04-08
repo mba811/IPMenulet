@@ -6,8 +6,11 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
+#import "IPaddress.h"
 
 @interface AddressService : NSObject
+
++(IPaddress *) getIPaddress;
 
 @end

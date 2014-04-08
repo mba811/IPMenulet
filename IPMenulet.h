@@ -9,12 +9,14 @@
 #import <Cocoa/Cocoa.h>
 
 @interface IPMenulet: NSObject {
+    
 	NSStatusItem *statusItem;
 	IBOutlet NSMenu *menu;
 	IBOutlet NSMenuItem *refreshMenuItem;
 	IBOutlet NSMenuItem *aboutMenuItem;
 	IBOutlet NSMenuItem *quitMenuItem;
 	NSTimer *timer;
+
 }
 
 -(void) update;

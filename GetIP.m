@@ -11,8 +11,9 @@
 @implementation GetIP
 
 +(NSString *) getIP {
+    
 	NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://highearthorbit.com/service/myip.php"]];
-
+    
 	NSURLResponse *response=nil;
 	NSError *error=nil;
 	NSData *data=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
@@ -21,7 +22,7 @@
 		return @"?.?.?.?";
 	}
 
-	return [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+	return [[[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding] autorelease];
 }
 
 @end

@@ -6,7 +6,7 @@ http://www.yellosoft.us/ipmenulet
 
 # VERSION
 
-1.1
+1.1.0
 
 # LICENSE
 

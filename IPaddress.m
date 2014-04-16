@@ -21,19 +21,31 @@
     return self;
 }
 
--(id) initWithData: (NSString*) anIP :(NSString*) aCountryCode :(double) aLatitude :(double) aLongitude {
-
+-(id) initWithIP: (NSString*) anIP {
+    
     self = [super init];
     
     if (self) {
         
         [self setIp: anIP];
-        [self setCountryCode: aCountryCode];
-        [self setLatitude: aLatitude];
-        [self setLongitude: aLongitude];
         
     }
     
+    return self;
+    
+}
+
+-(id) initWithIPAndAddress: (NSString*) anIP :(Address*) anAddress {
+
+    self = [super init];
+
+    if (self) {
+
+        [self setIp: anIP];
+        [self setAddress: anAddress];
+
+    }
+
     return self;
 
 }
@@ -41,10 +53,12 @@
 - (void)dealloc {
 
     [_ip release];
-    [_city release];
-	[_regionCode release];
-    [_postalCode release];
-	[_countryCode release];
+    [_address release];
+    
+//    [_city release];
+//	[_regionCode release];
+//    [_postalCode release];
+//	[_countryCode release];
     
     [super dealloc];
 }
